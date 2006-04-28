@@ -1,0 +1,17 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1530
+
+This script provides the TIM command which measures execution time vim takes to execute given commands up to microsecond resolution (actual resolution depends on OS).
+
+Example:
+
+   TIM 2000 let x=0  " How much time is takes to do 'x=0' 20000 times ?
+
+If first argument after TIM is a number, it is treated as repetiion count. 
+If first argument is not a number, the command is executed once.
+
+Multiple commands, separated by bars(|) can be used under TIM command:
+
+     TIM 100 e xxx | bd  "How much time it takes 
+                                  " to open and close the buffer 100 times
+
+
